@@ -8,6 +8,7 @@ class ComicAPIService {
     final http.Response response = await http.get(
       Uri.parse('$_baseURL/comic'),
     );
+    print(response.body);
     return comicsFromJson(response.body);
   }
 
